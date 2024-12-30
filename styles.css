@@ -1,0 +1,324 @@
+:root {
+    --scarlet: #FF3A20;
+    --teaGreen1: #1AC8ED;
+    --teaGreen2: #C4F4C7;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", serif;
+    color: white;
+}
+
+body {
+    /* height: 100%; */
+    background-image: radial-gradient(circle, #aca7af, #a699ae, #a08bad, #997eab, #9270aa, #85629d, #785490, #6b4783, #563769, #412750, #2e1939, #1c0923);
+    /* background-image: radial-gradient(circle, #aca7af, #b3a3be, #ba9ecd, #c199dc, #c794eb, #ce9af1, #d6a1f8, #dda7fe, #e7bafe, #f0cefe, #f7e2fe, #fdf6ff); */
+
+}
+
+
+
+
+
+li {
+    list-style: none;
+}
+
+ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: black; */
+}
+
+ul li {
+    padding: 1.5%;
+}
+
+nav .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 
+.themeSwitch {
+    
+        Dark Theme icon changer thingy
+   
+} 
+*/
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main section {
+    /* height: fit-content; */
+    width: 75vw;
+    margin: 1%;
+    border: 0.2em solid white;
+    border-radius: 0.5em;
+}
+
+.RandomNumber {
+    display: grid;
+    /* grid-template-rows: "1fr 1fr 1fr 1fr";
+    grid-template-columns: "1fr 1fr 1fr 1fr"; */
+    grid-template-areas:
+        ". head head ."
+        ". disp disp ."
+        ". inp inp ."
+        ". butn butn .";
+}
+
+.main h2 {
+
+    color: var(--teaGreen1);
+    font-size: 2em;
+}
+
+.RandomNumber h2 {
+    grid-area: head;
+    justify-self: center;
+}
+
+.RandomNumber #rand {
+    grid-area: disp;
+    justify-self: center;
+}
+
+#rand {
+    font-size: 3em;
+    font-weight: bold;
+}
+
+#pass {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.RandomNumber .inp {
+    justify-self: center;
+    grid-area: inp;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+}
+
+input {
+    /* background-color: var(--teaGreen2); */
+    padding: 2%;
+    color: black;
+    border-radius: 0.3em;
+    border: none;
+
+}
+
+input::placeholder {
+    font-size: 0.6rem;
+    text-align: center;
+}
+
+.RandomNumber .generate {
+    justify-self: center;
+    grid-area: butn;
+
+
+}
+
+.btn {
+    border: none;
+    border-radius: 0.75em;
+    padding: 1% 3%;
+    margin: 2%;
+    border: 0.1rem solid white;
+    background-color: var(--scarlet);
+}
+
+.btnHover:hover {
+    cursor: pointer;
+    background-color: #ff3116;
+    font-weight: bold;
+    transform: scale(1.1);
+}
+
+.fcc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.RandomPassword {
+    display: grid;
+    /* grid-template-rows: "1fr 1.5fr 1fr";
+    grid-template-columns: "1fr 1fr 1fr 1fr"; */
+    grid-template-areas:
+        ". head head ."
+        ". pass pass ."
+        ". butn butn .";
+    /* padding: 3%; */
+}
+
+.RandomPassword>* {
+    margin: 2%;
+}
+
+.RandomPassword h2 {
+    grid-area: head;
+    justify-self: center;
+}
+
+.RandomPassword .password {
+    grid-area: pass;
+    display: flex;
+    gap: 5%;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.RandomPassword button {
+    grid-area: butn;
+    justify-self: center;
+}
+
+i {
+    color: rgb(255, 0, 0);
+}
+
+.password i {
+    font-size: 1.5rem;
+    border: 0.1em solid black;
+    background-color: #C4F4C7;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.show input{
+    color: rgb(255, 255, 255);
+}
+.grid-r1f2f-c1f1f1f{
+
+    display: grid;
+    grid-template-rows: "1fr 2fr";
+    grid-template-columns: repeat(3, 1fr);
+}
+.grid-r1f2f-c1f1f1f h2{
+    grid-row: 1;
+    grid-column: 2;
+    white-space: nowrap;
+    text-align: center;
+
+}
+
+.grid-r1f2f-c1f1f1f :nth-child(2){
+    grid-row: 2;
+    grid-column: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+}
+.grid-r1f2f-c1f1f1f >*{
+    margin: 5%;
+}
+.Timer{
+    display: grid;
+    grid-template-rows: "1.5fr 2fr 1.5fr" ;
+    grid-template-columns: repeat(3,1fr);
+}
+.Timer h2{
+    grid-row: 1;
+    grid-column: 2;
+    text-align: center;
+}
+.Timer .leftTime{
+    grid-row: 2;
+    grid-column: 2;
+    text-align: center;
+    font-size: 5em;
+    align-content: center;
+    white-space: nowrap;
+    font-weight: bold;
+}
+.Timer #time{
+    grid-row: 3;
+    grid-column: 2;
+}
+.Timer > *{
+    margin: 5%;
+}
+button.start{
+    grid-row: 3;
+    grid-column: 3;
+}
+
+.animate{
+    animation: flicker 1s ease-in-out infinite;
+}
+@keyframes flicker {
+    0%{
+        color: red;
+        opacity: 1;
+    }
+    20%{
+        opacity: 0;
+    }
+    40%{
+        color: red;
+        opacity: 1;
+    }
+    60%{
+        opacity: 0;
+
+    }
+    80%{
+        color: red;
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width : 480px) {
+
+    h2,
+    #pass {
+        font-size: 1.5em !important; 
+    }
+
+    .inp input {
+        height: 50%;
+        width: 100%;
+    }
+    .leftTime{
+        font-size: 2em !important;
+    }
+
+}

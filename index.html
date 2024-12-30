@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini Project 3</title>
+    <!-- IMPORTS -->
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <!-- 
+    RandomNumber RandomPassword(hide password) Email-Validation
+    PrimeCheck   Palindrome-Check              Timer -->
+
+    <nav>
+      <ul class="navlist">
+        <li class="logo">
+          <img src="jsLogo.svg" alt="" />
+          <h1>Learn JS</h1>
+        </li>
+      </ul>
+    </nav>
+
+    <section class="main">
+      <section class="RandomNumber">
+        <h2>Random Number Generator</h2>
+        <div id="rand">0</div>
+        <div class="inp">
+          <input type="number" id="ll" placeholder="Enter Start(default 0)" />
+          <input type="number" id="ul" placeholder="Enter End(default 100)" />
+        </div>
+        <button class="generate btnHover btn">Generate</button>
+      </section>
+
+      <section class="RandomPassword">
+        <h2>Random Password Generator</h2>
+        <div class="password">
+          <div id="pass">* * * * * * * * * * * *</div>
+          <div class="show">
+            <i class="fa-solid fa-eye-slash" id="eyeIcon"></i>
+          </div>
+        </div>
+        <button id="generatePass" class="btnHover btn">
+          Generate password
+        </button>
+      </section>
+      <section class="Email-Validation grid-r1f2f-c1f1f1f">
+        <h2>Validate Email</h2>
+        <div class="show">
+          <input type="text" id="mail" placeholder="Enter Your mail" />
+          <button id="validate" class="btnHover btn">Validate</button>
+        </div>
+      </section>
+
+      <section class="PrimeCheck grid-r1f2f-c1f1f1f">
+        <h2>Is it a Prime?</h2>
+        <div class="pcheck">
+          <input type="number" id="prime" placeholder="Enter a Number " />
+          <button id="check" class="btnHover btn">Check</button>
+        </div>
+      </section>
+
+      <section class="Palindrome-Check grid-r1f2f-c1f1f1f">
+        <h2>Is it a Palindrome?</h2>
+        <div class="paliChk">
+          <input type="text" id="palli" placeholder="Enter a word " />
+          <button id="palliCheck" class="btnHover btn">Check</button>
+        </div>
+      </section>
+
+      <section class="Timer">
+        <h2>Set an Alarm</h2>
+        <div class="leftTime" >00 : 00 : 00</div>
+        <input type="time" id="time"  />
+        <button id="startTime" class="start btnHover btn">Start</button>
+      </section>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
